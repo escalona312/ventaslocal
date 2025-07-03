@@ -16,17 +16,7 @@
         <div class="form-group">
           <label for="producto">Producto:</label>
           <input type="text" id="producto" placeholder="Escribe el nombre del producto" list="productos-sugeridos" />
-          <datalist id="productos-sugeridos">
-            <option value="Calzón"><option value="Calzoncillo"><option value="Sostén"><option value="Boxer">
-            <option value="Calza"><option value="Pantalón"><option value="Jean"><option value="Short">
-            <option value="Falda"><option value="Leggins"><option value="Polera"><option value="Camiseta">
-            <option value="Camisa"><option value="Blusa"><option value="Tank Top"><option value="Crop Top">
-            <option value="Casaca"><option value="Chaqueta"><option value="Sweater"><option value="Hoodie">
-            <option value="Chaleco"><option value="Abrigo"><option value="Zapatillas"><option value="Zapatos">
-            <option value="Sandalias"><option value="Botas"><option value="Chinelas"><option value="Gorro">
-            <option value="Bufanda"><option value="Guantes"><option value="Cinturón"><option value="Cartera">
-            <option value="Mochila"><option value="Lentes">
-          </datalist>
+          
         </div>
         <div class="form-group">
           <label for="monto">Monto ($):</label>
@@ -41,6 +31,7 @@
         <button onclick="agregarVenta()">➕ Agregar Venta</button>
         <button onclick="generarFactura()" style="background: linear-gradient(45deg, #28a745, #20c997);">📄 Generar Factura</button>
         <button onclick="limpiarTodo()" class="btn-danger">🗑️ Limpiar Todo</button>
+        <button onclick="descargarFacturaPDF()" style="background: linear-gradient(45deg, #007bff, #00c6ff);">⬇️ Descargar PDF</button>
       </div>
     </div>
 
@@ -79,6 +70,8 @@
       </table>
     </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
